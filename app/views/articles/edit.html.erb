@@ -1,0 +1,51 @@
+<h1>Editing "<%=h @article.title %>"</h1>
+
+<% form_for(@article) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title, :size => 70 %>
+  </p>
+  <p>
+  	Created by *writer* on <%= @article.date %>.<br />
+  </p>
+  <p>
+    <b>Body</b><br />
+    <%= f.text_area :body, :rows => 20, :cols => 120 %>
+  </p>
+
+  <p>
+    <label for="category">Category<br /></label>
+    	<select name="category">
+    		<% for category in @categories %>
+    			<% if @article.category_id == category.id %>
+    				<option value="<%= category.id %>" selected>
+    				<%= category.category_name %>
+    				</option>
+    			<% else %>
+    				<option value="<%= category.id %>">
+    				<%= category.category_name %>
+    				</option>
+    			<% end %>
+    		<% end %>
+    	</select>
+  </p>
+  
+  <p>
+  	<b>Published Status: </b><%= @article.published_status %><br />
+  </p>
+  <p>
+    <%= button_to "Save", :method => :put, :action => :update, :id => @article %>
+  </p>
+  <p>
+		<%= button_to "Publish", :action => :publish, :id => @article %>
+	</p>
+	<p>
+		<%= button_to "View Article", :action => :view, :id => @article %>
+	</p>
+<% end %>
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %> |
+<a href="http://localhost:3000/blog">Main Page</a>

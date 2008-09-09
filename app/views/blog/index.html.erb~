@@ -1,0 +1,50 @@
+<div id="recent-box">
+	<h4>Recent Articles</h4>
+	<% if @articles.length < 1 %>
+		There are no recent articles. <br />
+	<% else %>
+		<% for recent_article in @recent_articles %>
+			<div class="entry">
+				<div class="title">
+					<%= link_to recent_article.title, recent_article %><br />
+				</div>
+			
+				<div class="preview">
+					<%= truncate(recent_article.body.gsub(/<.*?>/,''), 70) %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+
+
+<div id="latest-box">
+	<h4>Latest Post</h4>
+	<% if @articles.empty? %>
+		There are no articles. <br />
+	<% else %>
+		<div class="title">
+			<%= link_to @latest_article.title, @latest_article %><br />
+		</div>
+	
+		<div class="preview">
+			<%= truncate(@latest_article.body.gsub(/<.*?>/,''), 309) %>
+		</div>
+	<% end %>
+	</div>
+	
+<div id="about-me-box">
+	<h4>About Me: </h4>
+</div>
+
+<div id="category-box">
+	<b>Browse by Category</b>
+	<% for category in @categories %>
+		<div id="category-box-entry">
+			<%= category.category_name %>
+		</div>
+	<% end %>
+	
+</div>
+
+<a href="http://localhost:3000/articles">View Articles</a>

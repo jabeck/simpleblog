@@ -1,0 +1,90 @@
+/* Blog main page view */
+
+#banner {
+	background: #777;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+	text-align: center;
+}
+
+#wrapper {
+	background: #555;
+	padding: 1em;
+}
+
+#about-me-box {
+	float: right;
+	padding: 1em;
+	background: #ddd;
+	width: 30em;
+	margin-top: 3em;
+}
+
+#about-me-box .entry-img {
+	float: right;
+}
+
+#category-box {
+	background: #777;
+	margin: 1em;
+	padding: 1em;
+	width: 20em;
+}
+
+#category-box-entry {
+	border: 1px solid #111;
+	padding: 10px;
+}
+
+#latest-box {
+	padding: 1em;
+	background: #eee;
+	width: 22em;
+	height: 20em;
+}
+
+#main {
+	background: #999;
+	margin-left: 7em;
+	margin-right: 7em;
+	padding: 1em;
+}
+
+#blog-display {
+	background: #bbb;
+	margin-left: 15em;
+	margin-right: 15em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+#recent-box {
+	float: right;
+	width: 30em;
+	background: #aaa;
+	padding: 1em;
+}
+
+#blog .entry {
+	border-bottom: 1px dotted #77d;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#blog .entry .title {
+	padding-bottom: 5px;
+}
+
+#blog .entry .preview {
+	font-size: small;
+}
+
+#blog .title {
+	padding-bottom: 10px;
+}
+
+#blog .preview {
+	font-size: small;
+}

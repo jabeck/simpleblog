@@ -1,0 +1,29 @@
+Make an option to customize categories
+Fix timestamp into a nicer format http://almosteffortless.com//2007/07/29/the-perfect-timestamp/
+Maybe separate date and time
+Make number of articles cut off and go on to next page
+Have a name associated with each comment
+Hide "Publish" button if article is already published.
+Have a counter for how many comments there are per article
+
+Add users
+Add formatting for the user when they write posts
+
+Things an author should be able to do:
+	Log in, stay logged in
+	Create new article, modify existing ones
+	Add category/subcategory
+	Show up in multiple categories
+	
+	
+Things I've Finished
+	*done* See list of all articles in reverse chron. order + previews
+	*done* Write a method to find the most recent article
+	*done* Write a method to find the 5 most recent articles	
+	*done* Write CSS
+	*done* Change Published status to not be an option...just be able to publish. 
+	*done* Add a publish button and make it functional
+	*done* Make it so only published posts show up on main page.
+	*done* Make index prettier
+	*done* Allow people to leave comments
+
