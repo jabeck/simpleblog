@@ -5,6 +5,7 @@ Have a name associated with each comment
 Hide "Publish" button if article is already published.
 Have a counter for how many comments there are per article
 Have clicking on each category link to a page that shows all other articles in that category
+Write code so that categories that are being used by articles cannot be deleted
 
 Add users
 Add formatting for the user when they write posts
