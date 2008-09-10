@@ -53,8 +53,8 @@
 
 #blog-display {
 	background: #bbb;
-	margin-left: 12em;
-	margin-right: 12em;
+	margin-left: 15em;
+	margin-right: 15em;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding: 1em;

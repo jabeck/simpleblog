@@ -1,8 +1,21 @@
-<p>
-  <b>Category name:</b>
-  <%=h @category.category_name %>
-</p>
+<div id="blog-display">
+<h2>Viewing articles in category "<%= @category.category_name %>"</h2>
 
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
+<div id="blog">
+	<% for article in @articles.reverse %>
+		<% if article.published_status == "Published" %>
+		<div class="entry">
+			<div class="title">
+				<%= link_to article.title, article %>
+			</div>
+			<div class="preview">
+				<%= truncate(article.body.gsub(/<.*?>/,''), 300) %>
+			</div>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+</div>
 <%= link_to 'Back', categories_path %>
+
+

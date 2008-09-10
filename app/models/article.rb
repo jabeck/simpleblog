@@ -7,12 +7,6 @@ class Article < ActiveRecord::Base
 		["Unpublished", "Unpublished"],
 		["Published",		"Published"]
 	]
-	
-	def get_category_name
-		@category = Category.find(:all, :conditions => ["id = ?", self.category])
-		self.category_name = @category.id
-		return self.category_name
-	end
 		
 	def self.find_articles
 		find(:all, :conditions => [ "published_status = ?", "Published" ], :order => "date").reverse!

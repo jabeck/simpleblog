@@ -41,7 +41,7 @@
 	<b>Browse by Category</b>
 	<% for category in @categories %>
 		<div id="category-box-entry">
-			<%= category.category_name %>
+			<%= link_to category.category_name, category %>
 		</div>
 	<% end %>
 	

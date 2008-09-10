@@ -7,7 +7,7 @@
 
 <% for category in @categories %>
   <tr>
-    <td><%=h category.category_name %></td>
+    <td><%= link_to category.category_name, category %></td>
     <td>
     	<dl>
     		<dt><%= link_to 'Modify', edit_category_path(category) %></dt>
