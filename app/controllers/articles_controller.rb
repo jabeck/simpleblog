@@ -15,8 +15,15 @@ class ArticlesController < ApplicationController
   	@article = Article.find(params[:id])
   	@article.published_status = "Published"
   	@article.update_attributes(params[:article])
-  	redirect_to(edit_article_path(@article))
+  	redirect_to(@article)
   	flash[:notice] = 'Article published.'
+  end
+  
+  def preview
+  	@article = Article.find(params[:id])
+	@categories = Category.find(:all)
+	flash[:notice] = "This is only a preview. Your changes cannot be seen by other users."
+	redirect_to(@article)
   end
   
   def comment
@@ -41,11 +48,6 @@ class ArticlesController < ApplicationController
     end
   end 
   
-  def view
-  		@article = Article.find(params[:id])
-  		redirect_to(@article)
-  	end
-
   # GET /articles/new
   # GET /articles/new.xml
   def new

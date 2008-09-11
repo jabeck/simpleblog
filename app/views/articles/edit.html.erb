@@ -38,11 +38,9 @@
   <p>
     <%= button_to "Save", :method => :put, :action => :update, :id => @article %>
   </p>
-  <p>
-		<%= button_to "Publish", :action => :publish, :id => @article %>
-	</p>
 	<p>
-		<%= button_to "View Article", :action => :view, :id => @article %>
+	Warning: Make sure you have saved before previewing or you will lose your work!
+		<%= button_to "Preview", :action => :preview, :id => @article %>
 	</p>
 <% end %>
 

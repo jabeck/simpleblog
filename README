@@ -6,6 +6,7 @@ Hide "Publish" button if article is already published.
 Have a counter for how many comments there are per article
 
 Write code so that categories that are being used by articles cannot be deleted
+Change "Publishing" a little so that if an already-published article is being edited, users cannot see saved changes until the person re-publishes?
 
 Add users
 Add formatting for the user when they write posts

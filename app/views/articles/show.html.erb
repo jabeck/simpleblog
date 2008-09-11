@@ -16,7 +16,9 @@
 <p>
 	<b>Published Status:</b>
 	<%=h @article.published_status %>
-	<%= button_to "Publish", :action => :publish, :id => @article %>
+	<% unless @article.published_status == "Published" %>
+		<%= button_to "Publish", :action => :publish, :id => @article %>
+	<% end %>
 </p>
 
 <p>
