@@ -1,20 +1,27 @@
 <div id="blog-display">
-<h2>Viewing articles in category "<%= @category.category_name %>"</h2>
+	<div class="label">
+		Viewing articles in "<%= @category.category_name %>"
+	</div>
 
-<div id="blog">
-	<% for article in @articles.reverse %>
-		<% if article.published_status == "Published" %>
-		<div class="entry">
-			<div class="title">
-				<%= link_to article.title, article %>
-			</div>
-			<div class="preview">
-				<%= truncate(article.body.gsub(/<.*?>/,''), 300) %>
-			</div>
+	<div class="article">
+		<div id="blog">
+			<% if @published_articles.empty? %>
+				There are no articles in this category yet!
+			<% end %>
+			
+			<% for article in @published_articles.reverse %>
+			
+				<div class="entry">
+					<div class="title">
+						<%= link_to article.title, article %>
+					</div>
+					<div class="preview">
+						<%= truncate(article.body.gsub(/<.*?>/,''), 300) %>
+					</div>
+				</div>
+			<% end %>
 		</div>
-		<% end %>
-	<% end %>
-</div>
+	</div>
 </div>
 <%= link_to 'Back', categories_path %>
 

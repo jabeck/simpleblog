@@ -29,12 +29,3 @@
 </table>
 
 <br />
-	<p>
-		<label for="category"><b>Category</b><br /></label>
-			<% for category in @categories %>
-				<%= category.category_name %><br />
-			<% end %>
-		<%= button_to "New Category", :action => "new_category" %>
-	</p>
-
-<%= link_to 'New article', new_article_path %> || <a href="http://localhost:3000/blog">Main Page</a> || <a href="http://localhost:3000/categories">View Categories</a>

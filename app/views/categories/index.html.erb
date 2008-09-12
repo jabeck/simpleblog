@@ -3,11 +3,14 @@
 <table>
   <tr align="left">
     <th>Category name</th>
+    <th>Articles in this Category
   </tr>
 
 <% for category in @categories %>
   <tr>
-    <td><%= link_to category.category_name, category %></td>
+  	 <td><%= category.category_name %></td>
+  	 <td><%= category.get_count %></td>
+    <td><%= link_to 'View Articles in this Category', category %></td>
     <td>
     	<dl>
     		<dt><%= link_to 'Modify', edit_category_path(category) %></dt>
@@ -20,4 +23,4 @@
 
 <br />
 
-<%= link_to 'New category', new_category_path %> || <a href="http://localhost:3000/blog">Main Page</a> || <a href="http://localhost:3000/articles">View Articles</a>
+<%= link_to 'New category', new_category_path %>

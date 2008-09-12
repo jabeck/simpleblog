@@ -1,4 +1,10 @@
-<h1>New article</h1>
+<div id="bordered-box">
+<div id="listings-box">
+	<div class="label">
+		New Article
+	</div>
+	
+	<div class="body">
 
 <% form_for(@article) do |f| %>
   <%= f.error_messages %>
@@ -9,7 +15,7 @@
   </p>
   <p>
     <b>Body</b><br />
-    <%= f.text_area :body, :rows => 20, :cols => 120 %>
+    <%= f.text_area :body, :rows => 20, :cols => 100 %>
   </p>
 	<p>
 		<label for="category">Category<br /></label>
@@ -25,8 +31,9 @@
 		<b>Published Status: </b> Not published yet.<br />
 	</p>
   <p>
-    <%= f.submit "Save" %>
+    <%= f.submit "Save" %>  ||   <%= link_to 'Cancel', articles_path %>
   </p>
+</div>
 <% end %>
-
-<%= link_to 'Back', articles_path %>
+</div>
+</div>

@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Simple Blog App</title>
-  <%= stylesheet_link_tag "blog" %>
+  <%= stylesheet_link_tag 'scaffold', 'blog' %>
 </head>
 <body id="blog">
 
@@ -14,7 +14,33 @@
 	</div>
 
 	<div id="wrapper">
+		<div id="side-panel">
+		
+			<a href="http://localhost:3000/articles">View Articles</a><br />
+			<a href="http://localhost:3000/categories">View Categories</a><br /><br /><br />
+			
+			
+			<label for="category"><b>Browse by Category:</b><br /></label>
+				<div id="category-box">
+					<% for category in @categories %>
+						<div id="category-entry">
+							<%= link_to category.category_name, category %>
+							<text align="right">(<%= category.get_count %>)<br />
+						</div>
+					<% end %>
+				</div>
+			<%= button_to "New Category", :action => "new_category" %>
+			
+		</div>
+		
 		<div id="main">
+		
+			<% if flash[:notice] %>
+				<div id="notice">
+					flash[:notice]
+				</div>
+			<% end %>
+			
 			<%= yield :layout %>
 		</div>
 

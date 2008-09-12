@@ -2,11 +2,10 @@ Fix timestamp into a nicer format http://almosteffortless.com//2007/07/29/the-pe
 Maybe separate date and time
 Make number of articles cut off and go on to next page
 Have a name associated with each comment
-Hide "Publish" button if article is already published.
 Have a counter for how many comments there are per article
-
 Write code so that categories that are being used by articles cannot be deleted
 Change "Publishing" a little so that if an already-published article is being edited, users cannot see saved changes until the person re-publishes?
+Add error checking
 
 Add users
 Add formatting for the user when they write posts
@@ -30,4 +29,7 @@ Things I've Finished
 	*done* Allow people to leave comments
 	*done* Make an option to customize categories
 	*done* Have clicking on each category link to a page that shows all other articles in that category
+	*done* Hide "Publish" button if article is already published.
+	*done* Make a side panel
+	*done* Move "Browse by category" to the side panel
 

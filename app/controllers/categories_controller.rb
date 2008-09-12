@@ -13,10 +13,17 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.xml
   def show
+  	 @categories = Category.find(:all)
     @category = Category.find(params[:id])
     @articles = Article.find(:all, :conditions => [ "category_id = ?", @category ])
+    @published_articles = []
     
-
+    for article in @articles
+    	if article.published_status == "Published"
+    		@published_articles << article
+    	end
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @category }
@@ -27,6 +34,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
+    @categories = Category.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +44,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
+  	 @categories = Category.find(:all)
     @category = Category.find(params[:id])
   end
 
@@ -46,7 +55,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        flash[:notice] = 'Category was successfully created.'
+        flash[:notice] = "Category was successfully created."
         format.html { redirect_to(@category) }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else

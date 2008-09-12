@@ -1,41 +1,46 @@
 <div id="blog-display">
-<p>
-  <h2><%=h @article.title %></h2>
-</p>
-<p>
-	Created by *writer* on <%=h @article.date %>
-</p>
-<p>
-  <%= @article.body %>
-</p>
-
-<p>
-  <b>Category:</b>
-   <%= @article.category.category_name %>
-</p>
-<p>
-	<b>Published Status:</b>
-	<%=h @article.published_status %>
-	<% unless @article.published_status == "Published" %>
-		<%= button_to "Publish", :action => :publish, :id => @article %>
-	<% end %>
-</p>
-
-<p>
-	<b>Comments: </b><br />
-		<% for comment in @article.comments %>
-			<%= comment.body %>
-			<hr />
-		<% end %>
+	<div class="label">
+		<%=h @article.title %>
+	</div>
 	
-	<%= form_tag :action => "comment", :id => @article %>
-		<%= text_area "comment", "body", :rows => 3, :cols => 70 %><br />
-		<%= submit_tag "Post Comment" %>
-	</form>
-</p>
+	<div class="article">
+		<p>
+			Created by *writer*, <%=h @article.time_ago_or_time_stamp %>
+		</p>
+		<p>
+  			<%= @article.body %>
+		</p>
 
+		<p>
+  			<b>Category:</b>
+   		<%= @article.category.category_name %>
+		</p>
+		<p>
+			<b>Published Status:</b>
+			<%=h @article.published_status %>
+			
+			<% unless @article.published_status == "Published" %>
+				<%= button_to "Publish", :action => :publish, :id => @article %>
+			<% end %>
+		</p>
+
+		<p>
+		<hr />
+		
+		<b>Comments: </b><br />
+			<% if @article.comments.empty? %>
+				There are no comments yet. Be the first to leave a comment!<br />
+			<% end %>
+			<% for comment in @article.comments %>
+				<%= comment.body %>
+				<hr />
+			<% end %><br />
+		Comment on this article:
+		<%= form_tag :action => "comment", :id => @article %>
+			<%= text_area "comment", "body", :rows => 3, :cols => 70 %><br />
+			<%= submit_tag "Post Comment" %>
+		</form>
+		</p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %> |
-<a href="http://localhost:3000/blog">Main Page</a>
-</div>
+<%= link_to 'Back', articles_path %>
