@@ -33,6 +33,11 @@ class Article < ActiveRecord::Base
 		self.comments_count = @comments.length
 	end
 	
+	def get_author_name
+		@user = User.find(:first, :conditions => [ "id = ?", self.author ])
+		return @user.name
+	end
+	
 # This section of code, time_ago_or_time_stamp, is from www.almosteffortless.com//2007/07/29/the-perfect-timestamp/	. I've modified it slightly to better fit my app. 
 	def time_ago_or_time_stamp
 		from_time = self.date

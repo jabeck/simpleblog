@@ -2,16 +2,12 @@ Fix timestamp into a nicer format http://almosteffortless.com//2007/07/29/the-pe
 Maybe separate date and time
 Make number of articles cut off and go on to next page
 Have a name associated with each comment
-Write code so that categories that are being used by articles cannot be deleted
+Write code so that categories that are being used by articles cannot be deleted...or just have all articles from the deleted category be re-categorized as "uncategorized"
 Change "Publishing" a little so that if an already-published article is being edited, users cannot see saved changes until the person re-publishes?
 Add error checking
+See how picture looks in "about me" section
 
 Add formatting for the user when they write posts
-
-Things an author should be able to do:
-	Log in, stay logged in
-	Create new article, modify existing ones
-	Add category/subcategory	
 	
 Things I've Finished
 	*done* See list of all articles in reverse chron. order + previews
@@ -30,4 +26,9 @@ Things I've Finished
 	*done* Move "Browse by category" to the side panel
 	*done* Have a counter for how many comments there are per article
 	*done* Add users
-
+	*done* Things an author should be able to do:
+			*done* Log in, stay logged in
+			*done* Create new article, modify existing ones
+			*done* Add category/subcategory	
+	*done* Associated an author with each article
+	*done* Allow people to view articles by author

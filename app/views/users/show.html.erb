@@ -1,8 +1,26 @@
-<p>
-  <b>Name:</b>
-  <%=h @user.name %>
-</p>
+<div id="blog-display">
+	<div class="label">
+		Viewing articles written by "<%= @user.name %>"
+	</div>
 
+	<div class="article">
+		<div id="blog">
+			<% if @published_articles.empty? %>
+				This author has not published any articles yet!
+			<% end %>
+			
+			<% for article in @published_articles.reverse %>
+			
+				<div class="entry">
+					<div class="title">
+						<%= link_to article.title, article %>
+					</div>
+					<div class="preview">
+						<%= truncate(article.body.gsub(/<.*?>/,''), 300) %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

@@ -35,9 +35,6 @@ class ArticlesController < ApplicationController
     redirect_to(@article)
   end
 
-  def new_category
-  	 redirect_to(categories_path)
-  end
   # GET /articles/1
   # GET /articles/1.xml
   def show
@@ -76,6 +73,9 @@ class ArticlesController < ApplicationController
     @article.published_status = "Unpublished" if !@article.published_status?
     @categories = Category.find(:all)
     @article.category_id = (params[:category])
+    
+    @user = User.find(:first, :conditions => ["id = ?", session[:user_id] ])
+    @article.author = @user
 
     respond_to do |format|
       if @article.save

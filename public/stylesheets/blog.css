@@ -11,7 +11,7 @@
 }
 
 #bordered-box {
-	border: 1px solid #111;
+	border: 1px solid #301;
 }
 
 #bordered-box .label {
@@ -41,6 +41,7 @@
 	color: #fff;
 	background: #933;
 	font-size: medium;
+	height: 100%;
 }
 
 #about-me-box {
@@ -52,7 +53,7 @@
 
 #about-me-box .label {
 	padding: 1em;
-	background: #111;
+	background: #301;
 	color: #fff;
 	height: 1em;
 	margin-bottom: 1em;
@@ -96,7 +97,7 @@
 
 #latest-box .label {
 	padding: 1em;
-	background: #111;
+	background: #301;
 	color: #fff;
 	margin-bottom: 1em;
 	font-size: small;
@@ -124,7 +125,7 @@
 
 #recent-box .label {
 	padding: 1em;
-	background: #111;
+	background: #301;
 	color: #fff;
 	margin-bottom: 1em;
 	font-size: small;
@@ -176,7 +177,7 @@
 }
 
 #blog-display .label {
-	background: #111;
+	background: #301;
 	padding: .5em;
 	margin-bottom: 1em;
 	color: #fff;
@@ -198,4 +199,36 @@
 	margin-left: 12em;
 	margin-right: 12em;
 	background: #eee;
+}
+
+.login-form fieldset{
+	width: 24em;
+	padding: 1em;
+}
+
+.login-form legend {
+	background: #301;
+	padding: .5em;
+	color: #fff;
+}
+
+.clearfix:after { 
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; 
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix { 
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
 }

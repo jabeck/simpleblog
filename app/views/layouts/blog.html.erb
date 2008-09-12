@@ -20,7 +20,8 @@
 			<% if session[:user_id] %>
 				<%= link_to 'View All Articles', :controller => 'articles' %><br />
 				<%= link_to 'View All Categories', :controller => 'categories' %><br /><br />
-				<%= button_to "New Category", :controller => 'categories', :action => 'new' %>
+				<%= button_to "New Category", :controller => 'categories', :action => 'new' %><br />
+				<%= button_to "New Article", :controller => 'articles', :action => 'new' %>
 				
 			<% end %><br /><br /><br />
 			
@@ -29,16 +30,20 @@
 					<% for category in @categories %>
 						<div id="category-entry">
 							<%= link_to category.category_name, category %>
-							<text align="right">(<%= category.get_count %>)<br />
+							(<%= category.get_count %>)<br />
 						</div>
 					<% end %>
 				</div>
 				<br /><br />
+			
+			<% if session[:user_id].nil? %>
+				<%= button_to 'Log In', :controller => :admin, :action => 'logout' %>
+			<% end %>
 				
 			<% if session[:user_id] %>
 				<%= button_to 'Logout', :controller => 'admin', :action => 'logout' %>
 			<% end %>
-			
+
 		</div>
 		
 		<div id="main">
@@ -51,7 +56,7 @@
 			
 			<%= yield :layout %>
 		</div>
-
+		
 	</div>
 
 </body>

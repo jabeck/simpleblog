@@ -5,7 +5,7 @@
 	
 	<div class="article">
 		<p>
-			Created by *writer*, <%=h @article.time_ago_or_time_stamp %>
+			Created by <%= link_to @article.get_author_name, :controller => 'users', :action => @article.author %>, <%=h @article.time_ago_or_time_stamp %>
 		</p>
 		<p>
   			<%= @article.body %>

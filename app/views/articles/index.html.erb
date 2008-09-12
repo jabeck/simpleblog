@@ -15,13 +15,13 @@
     <td>
     	<dl>
     		<dt><b><%= link_to truncate(article.title.gsub(/<.*?>/,''), 30), article %></b></dt>
-    		<dt>(<%= article.get_count %>) Comments</dt>
+    		<dt>(<%= link_to article.get_count, article %>) Comments</dt>
     	</dl>
     </td>
     <td><%=h truncate(article.body.gsub(/<.*?>/,''), 40) %></td>
     <td><%=h article.time_ago_or_time_stamp %></td>
-    <td><%=h article.author %></td>
-    <td><%=h article.category.category_name %></td>
+    <td><%= link_to article.get_author_name, :controller => 'users', :action => article.author %></td>
+    <td><%= link_to article.category.category_name, :controller => 'categories', :action => article.category_id %></td>
     <td align="center"><%=h article.check_if_published %></td>
     <td>
     	<dl>

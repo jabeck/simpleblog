@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_filter :authorize, :except => :show
   # GET /users
   # GET /users.xml
   def index
@@ -16,6 +17,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @categories = Category.find(:all)
+    @articles = Article.find(:all, :conditions => [ "author = ?", @user.id ])
+    @published_articles = []
+    
+    for article in @articles
+    	if article.published_status == "Published"
+    		@published_articles << article
+    	end
+    end
 
     respond_to do |format|
       format.html # show.html.erb
