@@ -1,0 +1,24 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+<table>
+  <tr>
+    <td>Username:</td>
+    <td><%= f.text_field :name, :size => 40 %></td>
+  </tr>
+ 
+  <tr>
+    <td>Password:</td>
+    <td><%= f.password_field :password, :size => 40 %></td>
+  </tr>
+  <tr>
+    <td>Confirm Password:</td>
+    <td><%= f.password_field :password_confirmation, :size => 40 %></td>
+  </tr>
+</table>
+<%= f.submit "Update" %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

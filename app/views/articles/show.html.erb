@@ -15,6 +15,7 @@
   			<b>Category:</b>
    		<%= @article.category.category_name %>
 		</p>
+		<% if session[:user_id] %>
 		<p>
 			<b>Published Status:</b>
 			<%=h @article.published_status %>
@@ -23,6 +24,7 @@
 				<%= button_to "Publish", :action => :publish, :id => @article %>
 			<% end %>
 		</p>
+		<% end %>
 
 		<p>
 		<hr />
@@ -41,6 +43,7 @@
 			<%= submit_tag "Post Comment" %>
 		</form>
 		</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<% if session[:user_id] %>
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+	<%= link_to 'Back', articles_path %>
+<% end %>

@@ -6,7 +6,6 @@ Write code so that categories that are being used by articles cannot be deleted
 Change "Publishing" a little so that if an already-published article is being edited, users cannot see saved changes until the person re-publishes?
 Add error checking
 
-Add users
 Add formatting for the user when they write posts
 
 Things an author should be able to do:
@@ -30,4 +29,5 @@ Things I've Finished
 	*done* Make a side panel
 	*done* Move "Browse by category" to the side panel
 	*done* Have a counter for how many comments there are per article
+	*done* Add users
 

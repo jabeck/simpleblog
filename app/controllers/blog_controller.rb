@@ -12,6 +12,10 @@ class BlogController < ApplicationController
   			@latest_article = @articles.fetch(0)
   		end
   		
-  		@categories = Category.find(:all) #This is just a placeholder until I figure out how to display categories separately.
+  		@categories = Category.find(:all)
   end
+  
+  protected
+  	def authorize
+  	end
 end

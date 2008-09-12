@@ -15,10 +15,14 @@
 
 	<div id="wrapper">
 		<div id="side-panel">
-		
-			<a href="http://localhost:3000/articles">View Articles</a><br />
-			<a href="http://localhost:3000/categories">View Categories</a><br /><br /><br />
+			<%= link_to 'Main Page', :controller => :blog, :action => "index" %><br />
 			
+			<% if session[:user_id] %>
+				<%= link_to 'View All Articles', :controller => 'articles' %><br />
+				<%= link_to 'View All Categories', :controller => 'categories' %><br /><br />
+				<%= button_to "New Category", :controller => 'categories', :action => 'new' %>
+				
+			<% end %><br /><br /><br />
 			
 			<label for="category"><b>Browse by Category:</b><br /></label>
 				<div id="category-box">
@@ -29,7 +33,11 @@
 						</div>
 					<% end %>
 				</div>
-			<%= button_to "New Category", :action => "new_category" %>
+				<br /><br />
+				
+			<% if session[:user_id] %>
+				<%= button_to 'Logout', :controller => 'admin', :action => 'logout' %>
+			<% end %>
 			
 		</div>
 		
@@ -37,7 +45,7 @@
 		
 			<% if flash[:notice] %>
 				<div id="notice">
-					flash[:notice]
+					<%= flash[:notice] %>
 				</div>
 			<% end %>
 			
@@ -45,8 +53,6 @@
 		</div>
 
 	</div>
-
-<p style="color: green"><%= flash[:notice] %></p>
 
 </body>
 </html>
