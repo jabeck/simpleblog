@@ -27,7 +27,7 @@
 		<p>
 		<hr />
 		
-		<b>Comments: </b><br />
+		<b>Comments (<%= @article.get_count %>): </b><br /><br />
 			<% if @article.comments.empty? %>
 				There are no comments yet. Be the first to leave a comment!<br />
 			<% end %>

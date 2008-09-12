@@ -159,6 +159,11 @@
 	font-size: small;
 }
 
+#blog .comment-label {
+	font-size: small;
+	text-align: right;
+}
+
 /* View for showing an individual article */
 
 #blog-display {

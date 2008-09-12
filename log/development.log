@@ -20177,3 +20177,1039 @@ Migrating to AddCountToComments (20080912000407)
   [4;36;1mSQL (0.000129)[0m   [0;1mPRAGMA index_list("articles")[0m
   [4;35;1mSQL (0.000128)[0m   [0mPRAGMA index_list("categories")[0m
   [4;36;1mSQL (0.000125)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.001077)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000745)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000630)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000610)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000650)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000646)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20080909205753)
+  [4;35;1mSQL (0.000611)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCommentsTable (20080909205825)
+  [4;36;1mSQL (0.000610)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20080909205926)
+  [4;35;1mSQL (0.000620)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddCategoryNameToArticle (20080909222504)
+  [4;36;1mSQL (0.000656)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to RemoveCategoryFromArticle (20080909224520)
+  [4;35;1mSQL (0.000611)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddCategoryIdToArticle (20080909224637)
+  [4;36;1mSQL (0.000608)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddCountToCategory (20080911181332)
+  [4;35;1mSQL (0.000617)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddCountToComments (20080912000407)
+  [4;36;1mSQL (0.000610)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddCommentsCountToArticle (20080912001040)
+  [4;35;1mSQL (0.000713)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.010569)[0m   [0mALTER TABLE "articles" ADD "comments_count" int[0m
+  [4;36;1mSQL (0.010277)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.003846)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080912001040')[0m
+  [4;36;1mSQL (0.001351)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000737)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.000074)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mPRAGMA index_list("comments")[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:13:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.007629)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.002313)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.000538)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mCategory Load (0.000873)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000488)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001295)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001688)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000499)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.08429 (11 reqs/sec) | Rendering: 0.03235 (38%) | DB: 0.01532 (18%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:13:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.000458)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 15) [0m
+  [4;36;1mCategory Load (0.000630)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.000422)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000393)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mComment Load (0.000315)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 15) [0m
+  [4;36;1mArticle Load (0.001090)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001419)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000443)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04875 (20 reqs/sec) | Rendering: 0.02042 (41%) | DB: 0.00517 (10%) | 200 OK [http://localhost/articles/15]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:13:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.003331)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.000620)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.000330)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mCategory Load (0.000355)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000347)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001100)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001666)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000889)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04658 (21 reqs/sec) | Rendering: 0.02303 (49%) | DB: 0.00864 (18%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:13:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.001117)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 14) [0m
+  [4;36;1mCategory Load (0.000577)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.000341)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000355)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;35;1mComment Load (0.000283)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 14) [0m
+  [4;36;1mArticle Load (0.001282)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.002049)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000552)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05830 (17 reqs/sec) | Rendering: 0.01723 (29%) | DB: 0.00656 (11%) | 200 OK [http://localhost/articles/14]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:13:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.007112)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.000683)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.000361)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mCategory Load (0.000375)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000386)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001146)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001510)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000466)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.14629 (6 reqs/sec) | Rendering: 0.02637 (18%) | DB: 0.01204 (8%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:15:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.003459)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.000782)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mComment Load (0.000390)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCategory Load (0.000668)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.000383)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;36;1mCategory Load (0.000310)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000141)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000150)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;36;1mCategory Load (0.000306)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000147)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000137)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000132)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000154)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000218)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000332)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000356)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mArticle Load (0.001073)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001393)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000440)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.06334 (15 reqs/sec) | Rendering: 0.03562 (56%) | DB: 0.01097 (17%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:15:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.007307)[0m   [0;1mSELECT * FROM "articles" ORDER BY date[0m
+  [4;35;1mCategory Load (0.001508)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mComment Load (0.000432)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCategory Load (0.000481)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000588)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;35;1mCategory Load (0.000789)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000288)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000404)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;35;1mCategory Load (0.000486)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000183)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000217)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000208)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000416)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000253)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000211)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000171)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001212)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001590)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000527)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.10638 (9 reqs/sec) | Rendering: 0.05599 (52%) | DB: 0.01727 (16%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:18:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.003038)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.000697)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mComment Load (0.000435)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCategory Load (0.001539)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.002082)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;36;1mCategory Load (0.000467)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000192)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000184)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;36;1mCategory Load (0.000452)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000235)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000601)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000209)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000293)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000207)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000259)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000232)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mArticle Load (0.001152)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.002046)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000913)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.15413 (6 reqs/sec) | Rendering: 0.12359 (80%) | DB: 0.01523 (9%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:19:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.007546)[0m   [0;1mSELECT * FROM "articles" ORDER BY date[0m
+  [4;35;1mCategory Load (0.001667)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mComment Load (0.000433)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCategory Load (0.000738)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000653)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;35;1mCategory Load (0.000858)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000262)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000223)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;35;1mCategory Load (0.000468)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000528)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000408)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000257)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000257)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000155)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000217)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000186)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001204)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001662)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000619)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.10721 (9 reqs/sec) | Rendering: 0.05223 (48%) | DB: 0.01834 (17%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:19:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.007370)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.001482)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mComment Load (0.000638)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCategory Load (0.000392)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.000395)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;36;1mCategory Load (0.000384)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000177)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000180)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;36;1mCategory Load (0.000358)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000171)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000194)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000248)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000195)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000206)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000255)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000182)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mArticle Load (0.001448)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.002190)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000645)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.09507 (10 reqs/sec) | Rendering: 0.04477 (47%) | DB: 0.01711 (17%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:19:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.007386)[0m   [0;1mSELECT * FROM "articles" ORDER BY date[0m
+  [4;35;1mCategory Load (0.000699)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mComment Load (0.000492)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCategory Load (0.000397)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000381)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;35;1mCategory Load (0.000374)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000164)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000176)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;35;1mCategory Load (0.000361)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000185)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000183)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000270)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000186)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000182)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mComment Load (0.000463)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mComment Load (0.000256)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mArticle Load (0.001285)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001533)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000542)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.16526 (6 reqs/sec) | Rendering: 0.12138 (73%) | DB: 0.01551 (9%) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2008-09-11 20:20:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.005560)[0m   [0mSELECT * FROM "articles" ORDER BY date[0m
+  [4;36;1mCategory Load (0.000722)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mComment Load (0.000434)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCategory Load (0.000390)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.000394)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 14) [0m
+  [4;36;1mCategory Load (0.000429)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000206)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 13) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000355)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 11) [0m
+  [4;36;1mCategory Load (0.000630)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000256)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000195)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000170)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000188)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000285)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mComment Load (0.000323)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mComment Load (0.000449)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mArticle Load (0.001338)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001786)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.001057)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.09249 (10 reqs/sec) | Rendering: 0.05249 (56%) | DB: 0.01517 (16%) | 200 OK [http://localhost/articles]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:22:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.003161)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.000701)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000426)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001247)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001722)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000879)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04757 (21 reqs/sec) | Rendering: 0.02257 (47%) | DB: 0.00814 (17%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:23:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.003049)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.000662)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000546)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001374)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001729)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000938)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05696 (17 reqs/sec) | Rendering: 0.02264 (39%) | DB: 0.00830 (14%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:24:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.003500)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.000762)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+ERROR: compiling _run_erb_47app47views47blog47index46html46erb RAISED compile error
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:37: syntax error, unexpected tCONSTANT, expecting ')'
+_erbout.concat "\t\t\t\t"; _erbout.concat(( link_to "<%= @latest_article.get_count ).to_s); _erbout.concat " Comments\", @latest_article %>\n"
+                                                                                                                     ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:38: syntax error, unexpected kEND, expecting ')'
+_erbout.concat "\t\t\t";  end ; _erbout.concat "\n"
+                             ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:40: syntax error, unexpected kEND, expecting ')'
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+                           ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:68: syntax error, unexpected kEND, expecting ')'
+Function body: def _run_erb_47app47views47blog47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<div id=\"about-me-box\">\n"
+_erbout.concat "\t<div class=\"label\">\n"
+_erbout.concat "\t\tAbout Me\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t<div class=\"body\">\n"
+_erbout.concat "\t\t<p>\n"
+_erbout.concat "\t\tMy name is Jaclyn. I am studying Biochemistry and Computer Science at Northern Michigan University. \n"
+_erbout.concat "\t\t</p>\n"
+_erbout.concat "\t\t<p>\n"
+_erbout.concat "\t\tI've taught myself Ruby on Rails, HTML, and CSS to build this project. \n"
+_erbout.concat "\t\t</p>\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"latest-box\">\n"
+_erbout.concat "\t<div class=\"label\">\n"
+_erbout.concat "\t\tLatest Post\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t<div class=\"article\">\n"
+_erbout.concat "\t\t";  if @articles.empty? ; _erbout.concat "\n"
+_erbout.concat "\t\t\tThere are no articles. <br />\n"
+_erbout.concat "\t\t";  else ; _erbout.concat "\n"
+_erbout.concat "\t\t\t<div class=\"title\">\n"
+_erbout.concat "\t\t\t\t"; _erbout.concat(( link_to @latest_article.title, @latest_article ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t\t\t</div>\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t\t\t<div class=\"preview\">\n"
+_erbout.concat "\t\t\t\t"; _erbout.concat(( truncate(@latest_article.body.gsub(/<.*?>/,''), 309) ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t</div>\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t";  if @latest_article.get_count == 0 ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\tNo comments yet.\n"
+_erbout.concat "\t\t\t\t\n"
+_erbout.concat "\t\t\t";  else ; _erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t\t"; _erbout.concat(( link_to "<%= @latest_article.get_count ).to_s); _erbout.concat " Comments\", @latest_article %>\n"
+_erbout.concat "\t\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"recent-box\">\n"
+_erbout.concat "\t<div class=\"label\">\n"
+_erbout.concat "\t\tRecent Articles\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t<div class=\"article\">\n"
+_erbout.concat "\t\t";  if @articles.length < 2 ; _erbout.concat "\n"
+_erbout.concat "\t\t\tThere are no recent articles. <br />\n"
+_erbout.concat "\t\t";  else ; _erbout.concat "\n"
+_erbout.concat "\t\t\t";  for recent_article in @recent_articles ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t<div class=\"entry\">\n"
+_erbout.concat "\t\t\t\t\t<div class=\"title\">\n"
+_erbout.concat "\t\t\t\t\t\t"; _erbout.concat(( link_to recent_article.title, recent_article ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "\t\t\t\t\t</div>\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t\t\t<div class=\"preview\">\n"
+_erbout.concat "\t\t\t\t\t\t"; _erbout.concat(( truncate(recent_article.body.gsub(/<.*?>/,''), 70) ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t</div>\n"
+_erbout.concat "\t\t\t\t</div>\n"
+_erbout.concat "\t\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "</div>\n"
+_erbout
+end
+Backtrace: /home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:68:in `compile_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:55:in `prepare!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:34:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:841:in `render_with_no_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+/usr/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+/usr/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:37: syntax error, unexpected tCONSTANT, expecting ')'
+_erbout.concat "\t\t\t\t"; _erbout.concat(( link_to "<%= @latest_article.get_count ).to_s); _erbout.concat " Comments\", @latest_article %>\n"
+                                                                                                                     ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:38: syntax error, unexpected kEND, expecting ')'
+_erbout.concat "\t\t\t";  end ; _erbout.concat "\n"
+                             ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:40: syntax error, unexpected kEND, expecting ')'
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+                           ^
+/home/jaclyn/Desktop/Rails/simpleBlog/app/views/blog/index.html.erb:68: syntax error, unexpected kEND, expecting ')') on line #37 of blog/index.html.erb:
+34: 				No comments yet.
+35: 				
+36: 			<% else %>			
+37: 				<%= link_to "<%= @latest_article.get_count %> Comments", @latest_article %>
+38: 			<% end %>
+39: 			
+40: 		<% end %>
+
+    app/views/blog/index.html.erb:68:in `compile_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:55:in `prepare!'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:34:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:24:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.006362)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.001715)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000446)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001623)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001846)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000602)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.08329 (12 reqs/sec) | Rendering: 0.03632 (43%) | DB: 0.01259 (15%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:25:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;35;1mArticle Load (0.002876)[0m   [0mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;36;1mCategory Load (0.001198)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;35;1mComment Load (0.000455)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001332)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001786)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.001016)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.18203 (5 reqs/sec) | Rendering: 0.02649 (14%) | DB: 0.00866 (4%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:25:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.002624)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.000676)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000441)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001072)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001420)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000582)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04540 (22 reqs/sec) | Rendering: 0.02242 (49%) | DB: 0.00681 (15%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:26:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;35;1mArticle Load (0.002482)[0m   [0mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;36;1mCategory Load (0.000792)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;35;1mComment Load (0.000527)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001205)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001608)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000585)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04708 (21 reqs/sec) | Rendering: 0.02557 (54%) | DB: 0.00720 (15%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:26:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.005892)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.001442)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000421)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001248)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001684)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000561)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.06657 (15 reqs/sec) | Rendering: 0.02307 (34%) | DB: 0.01125 (16%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:26:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;35;1mArticle Load (0.003245)[0m   [0mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;36;1mCategory Load (0.001254)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;35;1mComment Load (0.000479)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001091)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001774)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000716)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05215 (19 reqs/sec) | Rendering: 0.02432 (46%) | DB: 0.00856 (16%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:26:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.002700)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.001025)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000412)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001271)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001725)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000726)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05554 (18 reqs/sec) | Rendering: 0.02314 (41%) | DB: 0.00786 (14%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:28:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;35;1mArticle Load (0.006677)[0m   [0mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;36;1mCategory Load (0.000726)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;35;1mComment Load (0.000364)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mArticle Load (0.001073)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001674)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000907)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05870 (17 reqs/sec) | Rendering: 0.02084 (35%) | DB: 0.01142 (19%) | 200 OK [http://localhost/blog]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:29:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.005850)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.001470)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000492)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001159)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001630)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000932)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.16865 (5 reqs/sec) | Rendering: 0.12377 (73%) | DB: 0.01153 (6%) | 200 OK [http://localhost/blog]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:29:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.000526)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 15) [0m
+  [4;36;1mCategory Load (0.000728)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.000441)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000709)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mComment Load (0.000856)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 15) [0m
+  [4;36;1mArticle Load (0.001390)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001741)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000633)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.06090 (16 reqs/sec) | Rendering: 0.02128 (34%) | DB: 0.00702 (11%) | 200 OK [http://localhost/articles/15]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:29:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.001708)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 15) [0m
+  [4;36;1mCategory Load (0.001404)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.000335)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mComment Load (0.000369)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mComment Load (0.000287)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 15) [0m
+  [4;36;1mArticle Load (0.001065)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001622)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000632)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.07214 (13 reqs/sec) | Rendering: 0.02592 (35%) | DB: 0.00742 (10%) | 200 OK [http://localhost/articles/15]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-09-11 20:30:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.002040)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mArticle Load (0.001119)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001426)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000434)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.05052 (19 reqs/sec) | Rendering: 0.02646 (52%) | DB: 0.00502 (9%) | 200 OK [http://localhost/categories]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2008-09-11 20:30:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"blog"}
+  [4;36;1mArticle Load (0.002591)[0m   [0;1mSELECT * FROM "articles" WHERE (published_status = 'Published') ORDER BY date[0m
+  [4;35;1mCategory Load (0.000637)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/blog
+Rendering blog/index
+  [4;36;1mComment Load (0.000388)[0m   [0;1mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mArticle Load (0.001130)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.001461)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000591)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04036 (24 reqs/sec) | Rendering: 0.01708 (42%) | DB: 0.00680 (16%) | 200 OK [http://localhost/blog]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-09-11 20:30:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.002197)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mArticle Load (0.002746)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;35;1mArticle Load (0.002191)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;36;1mArticle Load (0.000453)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.06431 (15 reqs/sec) | Rendering: 0.03754 (58%) | DB: 0.00759 (11%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2008-09-11 20:30:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"categories"}
+  [4;36;1mCategory Load (0.002082)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.000751)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mArticle Load (0.000919)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mArticle Load (0.001095)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001373)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04895 (20 reqs/sec) | Rendering: 0.00374 (7%) | DB: 0.00622 (12%) | 200 OK [http://localhost/categories/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:30:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.001156)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 15) [0m
+  [4;35;1mCategory Load (0.001969)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.000328)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.000359)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mComment Load (0.000297)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 15) [0m
+  [4;35;1mArticle Load (0.001072)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001405)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000583)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.06699 (14 reqs/sec) | Rendering: 0.02048 (30%) | DB: 0.00717 (10%) | 200 OK [http://localhost/articles/15]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2008-09-11 20:35:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZDJiNDg5OGY1YzYzZjI0MDI5YTAzMDg2NjFkYjJm
+ZjgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--25c6855df90b169dd4c53f80c06bb56f21c826b2
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.000575)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 15) [0m
+  [4;35;1mCategory Load (0.000734)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.000350)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mComment Load (0.000380)[0m   [0mSELECT * FROM "comments" WHERE (article_id = 15) [0m
+  [4;36;1mComment Load (0.000304)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 15) [0m
+  [4;35;1mArticle Load (0.001099)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 1) [0m
+  [4;36;1mArticle Load (0.001390)[0m   [0;1mSELECT * FROM "articles" WHERE (category_id = 2) [0m
+  [4;35;1mArticle Load (0.000439)[0m   [0mSELECT * FROM "articles" WHERE (category_id = 3) [0m
+Completed in 0.04091 (24 reqs/sec) | Rendering: 0.01675 (40%) | DB: 0.00527 (12%) | 200 OK [http://localhost/articles/15]
+  [4;36;1mSQL (0.001049)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000808)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000703)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000668)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000683)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000713)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000677)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000674)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000685)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000691)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20080909205753)
+  [4;36;1mSQL (0.000688)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCommentsTable (20080909205825)
+  [4;35;1mSQL (0.000683)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20080909205926)
+  [4;36;1mSQL (0.000674)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddCategoryNameToArticle (20080909222504)
+  [4;35;1mSQL (0.000700)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to RemoveCategoryFromArticle (20080909224520)
+  [4;36;1mSQL (0.000696)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddCategoryIdToArticle (20080909224637)
+  [4;35;1mSQL (0.000672)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddCountToCategory (20080911181332)
+  [4;36;1mSQL (0.000672)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddCountToComments (20080912000407)
+  [4;35;1mSQL (0.000681)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddCommentsCountToArticle (20080912001040)
+  [4;36;1mSQL (0.000711)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (20080912004235)
+  [4;35;1mSQL (0.000673)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.009693)[0m   [0mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.004332)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (0.004169)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (0.003497)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080912004235')[0m
+  [4;35;1mSQL (0.000820)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000509)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000166)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000088)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.000339)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.000228)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m

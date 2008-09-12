@@ -28,6 +28,15 @@
 	
 			<div class="preview">
 				<%= truncate(@latest_article.body.gsub(/<.*?>/,''), 309) %>
+			</div><br />
+
+			<div class="comment-label">
+				<% if @latest_article.get_count == 0 %>
+					(No comments yet.)
+				
+				<% else %>			
+					(<%= link_to @latest_article.get_count, @latest_article %> Comments)
+				<% end %>
 			</div>
 		<% end %>
 	</div>

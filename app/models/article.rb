@@ -28,6 +28,11 @@ class Article < ActiveRecord::Base
 		self.published_status = "Published"
 	end
 	
+	def get_count
+		@comments = Comment.find(:all, :conditions => [ "article_id = ?", self.id ])
+		self.comments_count = @comments.length
+	end
+	
 # This section of code, time_ago_or_time_stamp, is from www.almosteffortless.com//2007/07/29/the-perfect-timestamp/	. I've modified it slightly to better fit my app. 
 	def time_ago_or_time_stamp
 		from_time = self.date
